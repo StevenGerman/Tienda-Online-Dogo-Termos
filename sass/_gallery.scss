@@ -1,0 +1,22 @@
+@use 'variables' as v;
+@use 'mixins';
+
+.gallery{
+    &__image-container{
+        background-image: url(../images/Termo-Blanco-1L/foto-termo-blanco-1lt-tapa.jpeg);
+        height: 420px;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 1px solid blue;   
+        background-position-y: -22px;
+        
+        
+    }
+    &__previous{
+        @include mixins.image-btn(235px,15px);   
+    }
+    &__next{
+        @include mixins.image-btn(235px,320px);     
+    }
+}

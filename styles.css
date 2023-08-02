@@ -172,6 +172,42 @@ body {
   cursor: pointer;
 }
 
+.gallery__image-container {
+  background-image: url(../images/Termo-Blanco-1L/foto-termo-blanco-1lt-tapa.jpeg);
+  height: 420px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid blue;
+  background-position-y: -22px;
+}
+.gallery__previous {
+  background-color: hsl(0, 0%, 100%);
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 235px;
+  left: 15px;
+}
+.gallery__previous:hover {
+  cursor: pointer;
+}
+.gallery__next {
+  background-color: hsl(0, 0%, 100%);
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 235px;
+  left: 320px;
+}
+.gallery__next:hover {
+  cursor: pointer;
+}
+
 .container {
   position: relative;
   width: 375px;
@@ -182,10 +218,6 @@ body {
   .container {
     width: 1115px;
   }
-}
-
-img {
-  width: 24px;
 }
 
 /*# sourceMappingURL=styles.css.map */
