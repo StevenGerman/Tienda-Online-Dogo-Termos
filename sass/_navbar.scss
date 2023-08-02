@@ -1,3 +1,31 @@
+@use 'variables' as v;
+
 .navbar{
     display: none;
+    //border: 1px solid green;
+    width: 500px;
+    &__items{
+        list-style: none;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__link{
+        text-decoration: none;
+        color: v.$Dark-grayish-blue;
+        display: flex;
+        align-items: center;
+        height: 112px;
+        
+        &:hover{
+            border-bottom: 4px solid v.$green;
+            color: v.$Black;
+            
+        }
+
+    }
+    @media (min-width: 1115px) {
+        display: flex;
+    }
 }

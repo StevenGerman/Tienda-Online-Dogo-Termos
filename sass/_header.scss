@@ -1,6 +1,7 @@
 @use 'variables' as v;
 
 .header{
+    background-color: v.$White;
     border: 1px solid red;
     display: flex;
     align-items: center;
@@ -16,13 +17,13 @@
     &__navigation{
         width: 168px;
         height: 100%;
-        border: 1px solid red;
+        //border: 1px solid red;
         display: flex;
         align-items: center;
         justify-content: space-between;
         
         @media (min-width: 1115px) {
-            width: 590px;
+            width: 760px;
         }   
     }
     &__menu{
@@ -35,7 +36,7 @@
         }  
     }
     &__logo{
-        border: 1px solid blue;
+        //border: 1px solid blue;
         height: 100%;
         object-fit: cover;
         width: 130px;
@@ -50,7 +51,7 @@
         align-items: center;
         width: 70px;
         justify-content: space-between;
-        border: 1px solid green;
+        //border: 1px solid green;
         @media (min-width: 1115px) {
             width: 125px;
         }
@@ -58,6 +59,7 @@
     &__cart{
         position: relative;
         &--notification{
+            display: none;
             background-color: v.$Orange;
             width: 15px;    
             height: 12px;
