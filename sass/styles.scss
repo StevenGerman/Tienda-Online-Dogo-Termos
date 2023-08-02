@@ -1,11 +1,14 @@
 @use 'variables' as v;
 @use 'initial';
 @use 'header';
+@use 'navbar';
+@use 'modal-navbar';
 
 .container{
+    position: relative;
     width: 375px;
-    border: 1px solid black;
     margin: auto;
+    border: 1px solid black;
     @media (min-width: 1115px) {
         width: 1115px;
     }

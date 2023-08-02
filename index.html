@@ -9,17 +9,19 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <img src="./images/icon-menu.svg" alt="icon-menu">
-            <img width="200px" src="./images/Nombre-Logo.png" alt="logo-nombre">
-            <div class="navbar">
-                <ul class="navbar__items">
-                    <li><a class="navbar__link" href="#">Productos</a></li>
-                    <li><a class="navbar__link" href="#">Termos</a></li>
-                    <li><a class="navbar__link" href="#">Combos</a></li>
-                    <li><a class="navbar__link" href="#">Preguntas</a></li>
-                    <li><a class="navbar__link" href="#">Contacto</a></li>
-                </ul>
+        <header class="header">
+            <div class="header__navigation">
+                <img class="header__menu" src="./images/icon-menu.svg" alt="icon-menu">
+                <img class="header__logo" src="./images/Nombre-Logo.svg" alt="logo-nombre">
+                <div class="navbar">
+                    <ul class="navbar__items">
+                        <li><a class="navbar__link" href="#">Productos</a></li>
+                        <li><a class="navbar__link" href="#">Termos</a></li>
+                        <li><a class="navbar__link" href="#">Combos</a></li>
+                        <li><a class="navbar__link" href="#">Preguntas</a></li>
+                        <li><a class="navbar__link" href="#">Contacto</a></li>
+                    </ul>
+                </div>
             </div>
             <!--inicio modal navbar-->
             <div class="modal-navbar__background">
@@ -35,12 +37,12 @@
                 </div>
             </div>
             <!--fin modal navbar-->
-            <div class="navbar__cart-avatar">
-                <div class="navbar__cart">
-                    <div class="navbar__cart--notification">3</div>
+            <div class="header__cart-avatar">
+                <div class="header__cart">
+                    <div class="header__cart--notification">3</div>
                     <img src="./images/icon-cart.svg" alt="icon-cart">
                 </div>
-                <img src="./images/avatar-dogo.svg" alt="avatar" width="50px">
+                <img class="header__avatar" src="./images/logo-avatar-ong.png" alt="avatar">
             </div>
         </header>
         <main class="content">

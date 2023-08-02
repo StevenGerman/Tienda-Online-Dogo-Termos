@@ -1,0 +1,7 @@
+@use 'variables' as v;
+
+@mixin modal-background{
+    background-color: v.$Modal-Black;
+    
+
+}
