@@ -1,0 +1,12 @@
+@use 'variables' as v;
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: v.$Grayish-blue;
+    font-family: v.$Font;
+}

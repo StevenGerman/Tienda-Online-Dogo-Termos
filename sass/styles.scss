@@ -1,3 +1,12 @@
-body{
-    background-color: burlywood;
+@use 'variables' as v;
+@use 'initial';
+@use 'header';
+
+.container{
+    width: 375px;
+    border: 1px solid black;
+    margin: auto;
+    @media (min-width: 1115px) {
+        width: 1115px;
+    }
 }
