@@ -6,13 +6,24 @@
 @use 'gallery';
 @use 'details';
 @use 'input';
+@use 'modal-cart';
 
 .container{
     position: relative;
     width: 375px;
     margin: auto;
-    border: 1px solid black;
+    //border: 1px solid black;
     @media (min-width: 1115px) {
         width: 1115px;
     }
+}
+.content{
+    @media (min-width: 1115px) {
+        display: flex;
+        padding: 90px 50px;
+        gap: 124px;
+    }
+}
+.modal-gallery__background{
+    display: none;
 }

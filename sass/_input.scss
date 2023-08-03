@@ -4,10 +4,11 @@
     margin-bottom: 24px;    
     height: 57px;
     display: flex;
+    background-color: v.$Light-grayish-blue;
     border-radius: 15px;
     justify-content: space-between;
     &__minus{
-        @include mixins.changeNumber(24px,2px);
+        @include mixins.changeNumber(24px,14px);
     }
     &__number{
         width: 100%;
@@ -15,7 +16,7 @@
         background-color: v.$Light-grayish-blue;
         font-weight: 700;
         font-family: v.$Font;
-        text-align: center;
+        text-align:center;
         font-size: 1.2em;
         outline: none;
     }

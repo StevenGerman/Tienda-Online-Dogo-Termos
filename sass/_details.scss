@@ -2,7 +2,7 @@
 @use 'mixins';
 .details{
     background-color: v.$White;
-    border: 1px solid red;
+    //border: 1px solid red;
     padding: 24px;
     &__category{
         color: v.$Orange;
@@ -49,5 +49,30 @@
     }
     &__button{
         @include mixins.button;
+    }
+
+    @media (min-width: 1115px) {
+        width: 446px;
+
+        padding-top: 60px;
+        &__title{
+            font-size: 2.7em;
+            margin-bottom: 48px;
+        }
+        &__description{
+            font-size: 0.9em;
+            color: v.$Dark-grayish-blue;
+            line-height: 24px;
+            margin-bottom: 37px;
+        }
+        &__prices{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__product-quantity{
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+        }
     }
 }
