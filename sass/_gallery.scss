@@ -10,13 +10,18 @@
         background-repeat: no-repeat;
         border: 1px solid blue;   
         background-position-y: -22px;
-        
-        
     }
     &__previous{
         @include mixins.image-btn(235px,15px);   
     }
     &__next{
         @include mixins.image-btn(235px,320px);     
+    }
+    &__thumnails{
+        display: none;
+        @media (min-width: 1115px) {
+            display: block;
+            
+        }
     }
 }
