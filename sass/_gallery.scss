@@ -12,10 +12,10 @@
         background-position-y: -22px;
     }
     &__previous{
-        @include mixins.image-btn(235px,15px);   
+        @include mixins.image-btn(235px,15px,false);   
     }
     &__next{
-        @include mixins.image-btn(235px,320px);     
+        @include mixins.image-btn(235px,320px,false);     
     }
     &__thumnails{
         display: none;

@@ -3,7 +3,7 @@
 .modal-navbar{
     display: none;
     &__background{
-        @include mixins.modal-background;
+        //@include mixins.modal-background;
         
     }
     background-color: v.$White;

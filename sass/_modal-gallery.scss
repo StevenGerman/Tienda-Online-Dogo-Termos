@@ -1,0 +1,56 @@
+@use 'variables' as v;
+@use 'mixins';
+
+.modal-gallery{
+    width: 540px;
+    
+    &__background{
+        //display: grid;
+        place-content: center;
+        @include mixins.modal-background;
+        display: none;
+    }
+    &__close-container{
+        text-align: right;
+        height: 30px;
+    }
+    &__close{
+        width: 16px;
+        &:hover{
+            cursor: pointer;
+            content: url(./images/icon-close-orange.svg);
+        }
+    }
+    &__image-container{
+        position: relative;
+        background-image: url(./images/Termo-Blanco-1L/foto-termo-blanco-1lt-tapa.jpeg);
+        background-size: cover;
+        height: 550px;
+        border-radius: 16px;
+        margin-bottom: 32px;
+        background-position-y: -30px;
+    }
+    &__thumnails{
+        display: flex;
+        justify-content: space-between;
+        width: 446px;
+        margin: auto;
+    }
+    &__thumnail{
+        width: 90px;
+        border-radius: 16px;
+        height: 90px;
+        object-fit: fill;
+        &:hover{
+            cursor: pointer;
+            border: 2px solid v.$Orange;
+        }
+    }
+    &__previous{
+        @include mixins.image-btn(240px,-24px,true);
+    }
+    &__next{
+        @include mixins.image-btn(240px,520px,true);
+    }
+
+}

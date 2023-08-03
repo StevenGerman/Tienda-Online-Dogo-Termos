@@ -22,5 +22,6 @@
     }
     &__plus{
         @include mixins.changeNumber(20px,2px);
+        width: 45px;
     }
 }

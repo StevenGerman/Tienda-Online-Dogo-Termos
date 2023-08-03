@@ -7,6 +7,7 @@
 @use 'details';
 @use 'input';
 @use 'modal-cart';
+@use 'modal-gallery';
 
 .container{
     position: relative;
@@ -23,7 +24,4 @@
         padding: 90px 50px;
         gap: 124px;
     }
-}
-.modal-gallery__background{
-    display: none;
 }
