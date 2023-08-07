@@ -25,3 +25,15 @@
         gap: 124px;
     }
 }
+
+.show{
+    display: block;
+}
+.cart-empty{
+    //border: 1px solid red;
+    text-align: center;
+    margin-top: 30px;
+    color: v.$Modal-Black;
+    font-weight: 700;
+    font-size: 1.1em;
+}
