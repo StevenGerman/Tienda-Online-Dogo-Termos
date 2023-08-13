@@ -163,7 +163,7 @@ body {
 }
 
 .gallery__image-container {
-  background-image: url(./images/Termo-Blanco-1L/img-termo-1.jpeg);
+  background-image: url(./images/Termo-Blanco-1L/image-termo-blanco-1litro-sebador-1.jpeg);
   height: 420px;
   width: 100%;
   background-size: cover;
@@ -434,9 +434,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 120%;
+  height: 100%;
   z-index: 10;
-  overflow: hidden;
   display: none;
 }
 .modal-gallery__close-container {
@@ -452,7 +451,7 @@ body {
 }
 .modal-gallery__image-container {
   position: relative;
-  background-image: url(./images/Termo-Blanco-1L/img-termo-1.jpeg);
+  background-image: url(./images/Termo-Blanco-1L/foto-termo-blanco-1lt-tapa.jpeg);
   background-size: cover;
   height: 550px;
   border-radius: 16px;
@@ -512,15 +511,13 @@ body {
   }
 }
 
-bodi .container {
+.container {
   position: relative;
   width: 375px;
   margin: auto;
-  display: flex;
-  flex-direction: column;
 }
 @media (min-width: 1115px) {
-  bodi .container {
+  .container {
     width: 1115px;
   }
 }
@@ -528,8 +525,6 @@ bodi .container {
 @media (min-width: 1115px) {
   .content {
     display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 90px 50px;
     gap: 124px;
   }
@@ -547,4 +542,4 @@ bodi .container {
   font-size: 1.1em;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles.css--watch.map */

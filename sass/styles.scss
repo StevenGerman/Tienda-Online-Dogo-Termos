@@ -9,10 +9,15 @@
 @use 'modal-cart';
 @use 'modal-gallery';
 
+
+bodi
+
 .container{
     position: relative;
     width: 375px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
     //border: 1px solid black;
     @media (min-width: 1115px) {
         width: 1115px;
@@ -21,6 +26,8 @@
 .content{
     @media (min-width: 1115px) {
         display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 90px 50px;
         gap: 124px;
     }

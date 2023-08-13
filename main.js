@@ -9,7 +9,7 @@ let userInputNumber = 0;
 plusBtn.addEventListener('click',()=>{
     userInputNumber++;
     userInput.value = userInputNumber;
-    console.log(userInputNumber);
+    //console.log(userInputNumber);
 });
 
 minusBtn.addEventListener('click', ()=>{
@@ -18,7 +18,7 @@ minusBtn.addEventListener('click', ()=>{
         userInputNumber = 0;
     }
     userInput.value = userInputNumber;
-    console.log(userInputNumber);
+    //console.log(userInputNumber);
 });
 
 
@@ -34,7 +34,7 @@ addToCartBtn.addEventListener('click', ()=>{
     cartNotification.innerText = lastValue;
     cartNotification.style.display = 'block';
     drawProductModal();
-    priceModal.innerHTML = `$125.00 x${lastValue} <span>$${lastValue*125}.00</span>`;
+    //priceModal.innerHTML = `$125.00 x${lastValue} <span>$${lastValue*125}.00</span>`;
 })
 
 //Mostrar modal-cart con el detalle del carrito
@@ -50,25 +50,104 @@ cartIconBtn.addEventListener('click', ()=>{
     //priceModal.innerHTML = `$125.00 x${lastValue} <span>$${lastValue*125}.00</span>`;
 
     if(lastValue == 0){
+        productContainer.innerHTML = `<p class="cart-empty">Tu carrito esta vacio</p>`;
+    }else{
         drawProductModal();
     }
 })
 
 //Borrar el contenido del carrito
-const deleteProductBtn = document.querySelector('.cart-modal__delete');
+function deleteProduct(){
+    const deleteProductBtn = document.querySelector('.cart-modal__delete');
 
+    deleteProductBtn.addEventListener('click', ()=>{
+        productContainer.innerHTML = '<p class="cart-empty">El carrito esta vacio</p>';
+        lastValue = 0;
+        cartNotification.innerText = lastValue;
+    });
+}
 
-deleteProductBtn.addEventListener('click', ()=>{
-    productContainer.innerHTML = '<p class="cart-empty">El carrito esta vacio</p>';
-    lastValue = 0;
-    cartNotification.innerText = lastValue;
+//Cambiar imagenes con los botones flecha.
+const imageContainer = document.querySelector(".gallery__image-container");
+const previusGalleryBtn = document.querySelector(".gallery__previous");
+const nextGalleryBtn = document.querySelector(".gallery__next");
+
+let imgIndex = 1;
+
+// const imageUrls = [
+//     './images/Termo-Blanco-1L/img-termo-1.jpeg',
+//     './images/Termo-Blanco-1L/img-termo-2.jpeg',
+//     './images/Termo-Blanco-1L/img-termo-3.jpeg',
+//     './images/Termo-Blanco-1L/img-termo-4.jpeg'
+// ]
+
+nextGalleryBtn.addEventListener('click', ()=>{
+    changeNextImage(imageContainer);
 })
+previusGalleryBtn.addEventListener('click', ()=>{
+    changePreviousImage(imageContainer);
+})
+//Mostrar el modal de imagenes cuando ahgo click en la imagen pricipal.
+const imagesModal = document.querySelector('.modal-gallery__background');
+const closeModalBtn = document.querySelector('.modal-gallery__close-container');
+
+imageContainer.addEventListener('click', ()=>{
+    imagesModal.style.display = 'grid';
+});
+
+closeModalBtn.addEventListener('click', ()=>{
+    imagesModal.style.display = 'none';
+})
+
+//Cambiar las imagenes principales desde las mineaturas.
+let galleryMiniaturas = document.querySelectorAll('.gallery__thumnail');
+galleryMiniaturas = [...galleryMiniaturas];
+console.log(galleryMiniaturas);
+
+galleryMiniaturas.forEach(miniatura => {
+    miniatura.addEventListener('click', event=>{
+        console.log(event.target.id);
+        imageContainer.style.backgroundImage = `url('./images/Termo-Blanco-1L/img-termo-${event.target.id}.jpeg')`
+    })
+})
+
+//Cambiar las imagenes principales desde las mineaturas en el modal.
+
+let modalMiniaturas = document.querySelectorAll('.modal-gallery__thumnail');
+modalMiniaturas = [...modalMiniaturas];
+const modalImageContainer = document.querySelector('.modal-gallery__image-container');
+modalMiniaturas.forEach(modalMineatura =>{
+    modalMineatura.addEventListener('click', event=>{
+        console.log(event.target.id.slice(-1));
+        modalImageContainer.style.backgroundImage = `url('./images/Termo-Blanco-1L/img-termo-${event.target.id.slice(-1)}.jpeg')`
+    })
+});
+
+//cambiar imagen principal de modal desde flechas.
+const nextModalBtn = document.querySelector('.modal-gallery__previous');
+const previousModalBtn = document.querySelector('.modal-gallery__next');
+
+nextModalBtn.addEventListener('click', ()=>{
+    changeNextImage(modalImageContainer);
+});
+previousModalBtn.addEventListener('click', ()=>{
+    changePreviousImage(modalImageContainer);
+})
+
+
+//modastrar navbar-modal
+const menuBtn = document.querySelector('.header__menu');
+const modalNavbar = document.querySelector('.modal-navbar__background');
+menuBtn.addEventListener('click', ()=>{
+    modalNavbar.style.display = 'block';
+})
+
 
 //funciones
 function drawProductModal(){
-    productContainer.innerHTML = `<div class="cart-modal__checkout-container">
+    productContainer.innerHTML = `
     <div class="cart-modal__details-container">
-        <img class="cart-modal__image" src="./images/Termo-Blanco-1L/foto-termo-blanco-1lt-tapa.jpeg" alt="thumnail">
+        <img class="cart-modal__image" src="./images/Termo-Blanco-1L/img-termo-2.jpeg" alt="thumnail">
         <div>
             <p class="cart-modal__product">Vacuum Bottle Blanco 1L</p>
             <p class="cart-modal__price">$125.00 x3 <span>$375.00</span></p>
@@ -77,5 +156,25 @@ function drawProductModal(){
     </div>
     <button class="cart-modal__finalizar-compra" >Finalizar Compra</button>
     </div>`
+    deleteProduct();
+    let priceModal = document.querySelector('.cart-modal__price');
+    priceModal.innerHTML = `$125 x${lastValue} <span>$${lastValue*125}.00</span>`;
+}
+
+function changeNextImage(imgConteiner){
+    if(imgIndex == 4){
+        imgIndex = 1;
+    }else{
+        imgIndex++;    
+    }
     
+    imgConteiner.style.backgroundImage = `url('./images/Termo-Blanco-1L/img-termo-${imgIndex}.jpeg')`
+}
+function changePreviousImage(imgConteiner){
+    if(imgIndex == 1){
+        imgIndex = 4;
+    }else{
+        imgIndex--;    
+    }   
+    imgConteiner.style.backgroundImage = `url('./images/Termo-Blanco-1L/img-termo-${imgIndex}.jpeg')`
 }
