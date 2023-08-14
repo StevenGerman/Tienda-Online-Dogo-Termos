@@ -128,13 +128,16 @@ previousModalBtn.addEventListener('click', ()=>{
 //modastrar navbar-modal
 const menuBtn = document.querySelector('.header__menu');
 const modalNavbar = document.querySelector('.modal-navbar');
+const modalNavbarBack = document.querySelector('.modal-navbar__background');
 const menuCloseBtn = document.querySelector('.modal-navbar__close-icon');
 menuBtn.addEventListener('click', ()=>{
     modalNavbar.style.display = 'block';
     console.log("Junca");
+    modalNavbarBack.style.display = 'block';
 })
 menuCloseBtn.addEventListener('click', ()=>{
     modalNavbar.style.display = 'none';
+    modalNavbarBack.style.display = 'none';
 })
 
 
@@ -142,14 +145,16 @@ menuCloseBtn.addEventListener('click', ()=>{
 
 //funcion para comprovar si estamos en desktop
 function isDesktop() {
-  return window.innerWidth < 400 && window.innerWidth > 375; // Puedes ajustar este valor según tus necesidades
+  return window.innerWidth > 375; // Puedes ajustar este valor según tus necesidades
 }
 //Mostrar el modal de imagenes cuando ahgo click en la imagen pricipal.
     const imagesModal = document.querySelector('.modal-gallery__background');
     const closeModalBtn = document.querySelector('.modal-gallery__close-container');
 
     imageContainer.addEventListener('click', ()=>{
+        
         if(isDesktop()){
+            
             imagesModal.style.display = 'grid';
         }
     });
