@@ -138,8 +138,12 @@ body {
   display: none;
   background-color: hsl(0, 0%, 100%);
   width: 250px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
   height: 100%;
   padding: 28px 24px;
+  z-index: 200;
 }
 .modal-navbar__items {
   margin-top: 50px;

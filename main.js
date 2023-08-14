@@ -127,11 +127,15 @@ previousModalBtn.addEventListener('click', ()=>{
 
 //modastrar navbar-modal
 const menuBtn = document.querySelector('.header__menu');
-const modalNavbar = document.querySelector('.modal-navbar__background');
+const modalNavbar = document.querySelector('.modal-navbar');
+const menuCloseBtn = document.querySelector('.modal-navbar__close-icon');
 menuBtn.addEventListener('click', ()=>{
     modalNavbar.style.display = 'block';
+    console.log("Junca");
 })
-
+menuCloseBtn.addEventListener('click', ()=>{
+    modalNavbar.style.display = 'none';
+})
 
 
 //funciones

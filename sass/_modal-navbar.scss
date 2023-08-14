@@ -8,8 +8,12 @@
     }
     background-color: v.$White;
     width: 250px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
     height: 100%;
     padding: 28px 24px;
+    z-index: 200;
     &__items{
         margin-top: 50px;
         //border: 1px solid red;
