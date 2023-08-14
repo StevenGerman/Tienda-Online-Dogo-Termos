@@ -512,7 +512,7 @@ body {
   }
 }
 
-bodi .container {
+.container {
   position: relative;
   width: 375px;
   margin: auto;
@@ -520,7 +520,7 @@ bodi .container {
   flex-direction: column;
 }
 @media (min-width: 1115px) {
-  bodi .container {
+  .container {
     width: 1115px;
   }
 }

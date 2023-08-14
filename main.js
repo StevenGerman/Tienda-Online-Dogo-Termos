@@ -87,17 +87,7 @@ nextGalleryBtn.addEventListener('click', ()=>{
 previusGalleryBtn.addEventListener('click', ()=>{
     changePreviousImage(imageContainer);
 })
-//Mostrar el modal de imagenes cuando ahgo click en la imagen pricipal.
-const imagesModal = document.querySelector('.modal-gallery__background');
-const closeModalBtn = document.querySelector('.modal-gallery__close-container');
 
-imageContainer.addEventListener('click', ()=>{
-    imagesModal.style.display = 'grid';
-});
-
-closeModalBtn.addEventListener('click', ()=>{
-    imagesModal.style.display = 'none';
-})
 
 //Cambiar las imagenes principales desde las mineaturas.
 let galleryMiniaturas = document.querySelectorAll('.gallery__thumnail');
@@ -143,7 +133,29 @@ menuBtn.addEventListener('click', ()=>{
 })
 
 
+
 //funciones
+
+//funcion para comprovar si estamos en desktop
+function isDesktop() {
+  return window.innerWidth < 400 && window.innerWidth > 375; // Puedes ajustar este valor según tus necesidades
+}
+//Mostrar el modal de imagenes cuando ahgo click en la imagen pricipal.
+    const imagesModal = document.querySelector('.modal-gallery__background');
+    const closeModalBtn = document.querySelector('.modal-gallery__close-container');
+
+    imageContainer.addEventListener('click', ()=>{
+        if(isDesktop()){
+            imagesModal.style.display = 'grid';
+        }
+    });
+
+    closeModalBtn.addEventListener('click', ()=>{
+        imagesModal.style.display = 'none';
+    })
+
+
+
 function drawProductModal(){
     productContainer.innerHTML = `
     <div class="cart-modal__details-container">
