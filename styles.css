@@ -528,51 +528,77 @@ body {
 }
 
 .footer {
-  border: 1px solid red;
+  border-top: 1px solid hsl(220, 13%, 13%);
   height: 200px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
-.footer__contracto {
+
+.contacto {
+  height: 180px;
+  width: 375px;
+  flex-direction: column;
+  align-items: center;
   display: flex;
-  justify-content: center;
-  border: 1px solid black;
-  height: 100%;
-  width: 100%;
-}
-.footer__contracto-items {
   list-style: none;
-  border: 1px solid green;
-  height: 100%;
-  width: 300px;
+  margin-bottom: 10px;
 }
-.footer__contracto-item {
-  margin: 12px;
-  border: 1px solid blue;
+.contacto__button--instagram {
+  margin: 10px;
+  width: 180px;
+  border: none;
+  background-color: #5b3dc6;
+  height: 34px;
+  border-radius: 12px;
+  color: hsl(0, 0%, 100%);
+  font-family: "Kumbh Sans", sans-serif;
 }
-.footer__contracto-button {
-  background-color: hsl(26, 100%, 55%);
+.contacto__button--instagram:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.contacto__button--whatsapp {
+  margin: 10px;
+  width: 180px;
+  border: none;
+  background-color: hsl(25, 100%, 94%);
+  height: 34px;
+  border-radius: 12px;
+  color: hsl(0, 0%, 0%);
+  font-family: "Kumbh Sans", sans-serif;
+}
+.contacto__button--whatsapp:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  background-color: green;
+  border: 1px solid hsl(0, 0%, 0%);
+}
+.contacto__button--correo {
+  padding: 10px;
+  width: 180px;
+  height: 34px;
+  background-color: #5b3dc6;
+  border-radius: 15px;
+  color: hsl(0, 0%, 100%);
+  font-family: "Kumbh Sans", sans-serif;
+  gap: 12px;
   width: 100%;
-  height: 47px;
-  border-radius: 8px;
+  height: 37px;
   border: none;
   color: hsl(0, 0%, 100%);
-  font-size: 0.9em;
-  font-weight: 700;
+  font-size: 0.8em;
+  font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
 }
-.footer__contracto-button:hover {
+.contacto__button--correo:hover {
   cursor: pointer;
-  opacity: 0.5;
-}
-.footer__contracto-button--whatsapp {
-  background-color: #075E54;
+  opacity: 0.9;
+  font-weight: 700;
 }
 
 .container {
