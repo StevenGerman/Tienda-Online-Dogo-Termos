@@ -145,7 +145,7 @@ menuCloseBtn.addEventListener('click', ()=>{
 
 //funcion para comprovar si estamos en desktop
 function isDesktop() {
-  return window.innerWidth > 375; // Puedes ajustar este valor según tus necesidades
+  return window.innerWidth > 1110 // Puedes ajustar este valor según tus necesidades
 }
 //Mostrar el modal de imagenes cuando ahgo click en la imagen pricipal.
     const imagesModal = document.querySelector('.modal-gallery__background');
