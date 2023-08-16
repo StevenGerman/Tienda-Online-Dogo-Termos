@@ -97,7 +97,7 @@ console.log(galleryMiniaturas);
 galleryMiniaturas.forEach(miniatura => {
     miniatura.addEventListener('click', event=>{
         console.log(event.target.id);
-        imageContainer.style.backgroundImage = `url('./images/Termo-Blanco-1L/img-termo-${event.target.id}.jpeg')`
+        imageContainer.style.backgroundImage = `url('./images/Termo-Blanco-1L/img-termo-${event.target.id}.webp')`
     })
 })
 
