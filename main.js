@@ -109,7 +109,7 @@ const modalImageContainer = document.querySelector('.modal-gallery__image-contai
 modalMiniaturas.forEach(modalMineatura =>{
     modalMineatura.addEventListener('click', event=>{
         console.log(event.target.id.slice(-1));
-        modalImageContainer.style.backgroundImage = `url('./images/Termo-Blanco-1L/img-termo-${event.target.id.slice(-1)}.jpeg')`
+        modalImageContainer.style.backgroundImage = `url('./images/Termo-Blanco-1L/img-termo-${event.target.id.slice(-1)}.webp')`
     })
 });
 
@@ -168,7 +168,7 @@ function isDesktop() {
 function drawProductModal(){
     productContainer.innerHTML = `
     <div class="cart-modal__details-container">
-        <img class="cart-modal__image" src="./images/Termo-Blanco-1L/img-termo-2.jpeg" alt="thumnail">
+        <img class="cart-modal__image" src="./images/Termo-Blanco-1L/img-termo-2.webp" alt="thumnail">
         <div>
             <p class="cart-modal__product">Vacuum Bottle Blanco 1L</p>
             <p class="cart-modal__price">$125.00 x3 <span>$375.00</span></p>
