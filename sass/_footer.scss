@@ -3,74 +3,61 @@
 
 .footer{
     border-top: 1px solid v.$Very-dark-blue;
-    height: 200px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.contacto{
-    //border: 1px solid green;
-    height: 180px;
+    height: 50px;
     width: 375px;
-    flex-direction: column;
-    align-items: center;
     display: flex;
-    list-style: none;
-    margin-bottom: 10px;
-    &__button--instagram{
-        margin: 10px;
-        width: 180px;
-        border: none;
-        background-color: #5b3dc6;
-        height: 34px;
-        border-radius: 12px;
-        color: v.$White;
-        font-family: v.$Font;    
-        &:hover{
-            cursor: pointer;
-            opacity: 0.5;
-        }
-    }
-    &__button--whatsapp{
-        margin: 10px;
-        width: 180px;
-        border: none;
-        background-color: v.$Pale-orange;
-        height: 34px;
-        border-radius: 12px;
-        color: v.$Black;
-        font-family: v.$Font;    
-        &:hover{
-            cursor: pointer;
-            opacity: 0.9;
-            background-color: green;
-            border: 1px solid v.$Black;
-        }
-    }
-    &__button--correo{
-        padding: 10px;
-        width: 180px;
-        height: 34px;
-        background-color: #5b3dc6;
-        border-radius: 15px;
-        color: v.$White;
-        font-family: v.$Font;
-        gap: 12px;
-        width: 100%;
-        height: 37px;
-        border: none;
-        color: v.$White;
-        font-size: 0.8em;
-        font-weight: 400;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    &__info{
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 16px;    
-        &:hover{
-            cursor: pointer;
-            opacity: 0.9;
-            font-weight: 700;
+        //border: 1px solid green;
+    }
+    &__logo{
+        //border: 1px solid red;
+        height: 37px;
+        width: 100px;
+    }
+    &__copyright{
+        font-size: 6px;
+    }
+    &__contacto{
+        //border: 1px solid green;
+        display: flex;
+        width: 100px;
+        padding: 0px 5px;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+        &--whatsapp{
+            &:hover{
+                cursor: pointer;
+                content: url(../images/whatsapp-Green.svg);
+            }
         }
+        &--instagram{
+            &:hover{
+                cursor: pointer;
+                content: url(../images/instagram-violet.svg);
+            }
+        }
+        &--facebook{
+            &:hover{
+                cursor: pointer;
+                content: url(../images/facebook-blue.svg);
+            }
+        }
+        &--gmail{
+            &:hover{
+                cursor: pointer;
+                content: url(../images/gmail-Red.svg);
+            }
+        }
+        
+    }
+    @media (min-width: 1115px) {
+        width: 1115px;
+
     }
 }

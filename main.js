@@ -189,7 +189,7 @@ function changeNextImage(imgConteiner){
         imgIndex++;    
     }
     
-    imgConteiner.style.backgroundImage = `url('./images/Termo-Blanco-1L/img-termo-${imgIndex}.jpeg')`
+    imgConteiner.style.backgroundImage = `url('./images/Termo-Blanco-1L/img-termo-${imgIndex}.webp')`
 }
 function changePreviousImage(imgConteiner){
     if(imgIndex == 1){
@@ -197,5 +197,5 @@ function changePreviousImage(imgConteiner){
     }else{
         imgIndex--;    
     }   
-    imgConteiner.style.backgroundImage = `url('./images/Termo-Blanco-1L/img-termo-${imgIndex}.jpeg')`
+    imgConteiner.style.backgroundImage = `url('./images/Termo-Blanco-1L/img-termo-${imgIndex}.webp')`
 }
