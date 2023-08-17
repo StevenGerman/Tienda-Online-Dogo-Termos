@@ -179,7 +179,7 @@ function drawProductModal(){
     </div>`
     deleteProduct();
     let priceModal = document.querySelector('.cart-modal__price');
-    priceModal.innerHTML = `$125 x${lastValue} <span>$${lastValue*125}.00</span>`;
+    priceModal.innerHTML = `$12.500 x${lastValue} <span>$${lastValue*12500}.00</span>`;
 }
 
 function changeNextImage(imgConteiner){
